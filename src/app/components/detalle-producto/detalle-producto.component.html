@@ -1,0 +1,21 @@
+<div *ngFor="let producto of autor">
+  <div class="card h-150 col-xs-3 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-light" style="width:600px;margin-left:10px;margin-top:10px;margin-bottom:100px;background-color:rgb(105,105,105);border-radius:20px;">
+    <div class="card-body">
+      <h3 class="card-title">Producto: {{producto.Producto}}</h3>
+      <h5 class="card-subtitle mb-2 text-warning">Autor: {{producto.email}}</h5>
+      <p class="card-text">Detalles: {{producto.Descripcion}}</p>
+      <a [routerLink]="['/nuevoComentario', producto.id]" class="card-link" style="text-align: right;"><img class="img" src= "assets/coment.png"/></a>
+    </div>
+  </div>
+<div  style="margin-left:10px; padding:20px;">
+<h5 class=" text-dark" style="width: rem; margin-bottom:20px;">Comentarios</h5>
+<div  style="width: rem; margin-bottom:10px;" *ngFor="let comentario of comentarios">
+  <div class="card-body" style="background-color: rgba(125, 170, 170, 0.575);border-radius: 20px;width: 500px;">
+    <h5 class="card-subtitle mb-2 text-light"><img style="width:100px; height:104px;" src="assets/usu-morado.png"/> {{comentario.email}}</h5>
+    <p class="card-text text-muted" style="margin-left: 100px;">{{comentario.Comentario}}</p>
+    <a href="#" class="card-link"></a>
+  </div>
+</div>
+</div>
+<!-- The routed views render in the <router-outlet>-->
+  <router-outlet></router-outlet>

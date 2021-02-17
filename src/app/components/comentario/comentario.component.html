@@ -1,0 +1,18 @@
+<div class="container" style="border-radius:30px;margin-top:10px;padding:20px;background-color: rgba(137, 151, 177, 0.719);">
+    <form [formGroup]="comentarioForm" (ngSubmit)="postForm(comentarioForm.value)">
+      
+      <h1 class="h3 mb-3 font-weight-normal text-warning">Nuevo Comentario</h1>
+      <div>
+        <label class="text-light" for="inputComentario">Comentario</label>
+        <input type="text" class="form-control" id="inputComentario" placeholder="Ingresa el Comentario..." formControlName="Comentario" />  
+      </div>
+
+      <div hidden>
+        <label for="inputProducto">Producto</label>
+        <input type="text" class="form-control" id="inputProducto" placeholder="Ingresa el producto..." formControlName="Producto" />
+      </div>
+      <button type="submit" style="margin-top:10px;" class="btn btn-lg btn-warning btn-block mb-2"> Guardar </button>
+    </form>
+  </div>
+    <img style="width:380px;float: right; margin-top: 100px;" src="assets/coment.png"/>
+ 

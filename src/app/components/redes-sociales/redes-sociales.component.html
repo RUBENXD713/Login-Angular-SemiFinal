@@ -1,0 +1,17 @@
+<div class="container ">
+    <a routerLink="/login">Volver</a>
+<div *ngFor="let Desarrollador of creadores">
+<div class="card col-sm row" style="width: 18rem;">
+    <img src="{{Desarrollador.foto}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{Desarrollador.name}}</h5>
+      <p class="card-text">{{Desarrollador.description}}</p>
+      <p class="card-text"><small class="text-muted">{{Desarrollador.email}}</small></p>
+      <a href="{{Desarrollador.face}}" class="btn btn-primary" *ngIf="Desarrollador.face != null">Facebook</a>
+      <a href="{{Desarrollador.git}}" class="btn btn-primary btn-danger" *ngIf="Desarrollador.git != null">GitHub</a>
+    </div>
+</div>
+<br>
+</div>
+<a routerLink="/login">Volver</a>
+</div>

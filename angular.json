@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Login-Dulce": {
+    "proyecto1a": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Login-Dulce",
+            "outputPath": "dist/proyecto1a",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Login-Dulce:build"
+            "browserTarget": "proyecto1a:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Login-Dulce:build:production"
+              "browserTarget": "proyecto1a:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Login-Dulce:build"
+            "browserTarget": "proyecto1a:build"
           }
         },
         "test": {
@@ -109,16 +109,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Login-Dulce:serve"
+            "devServerTarget": "proyecto1a:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Login-Dulce:serve:production"
+              "devServerTarget": "proyecto1a:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Login-Dulce"
+  "defaultProject": "proyecto1a",
+  "cli": {
+    "analytics": "5ebdb681-469f-42dd-908d-92b17dce08b3"
+  }
 }

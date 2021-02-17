@@ -1,0 +1,46 @@
+<div >
+  <div class="div text-center" >
+  <form
+    class="form-signin animated fadeIn"
+    autocomplete="off"
+    [formGroup]="registerForm"
+    (ngSubmit)="register()"
+  >
+    <img class="mb-4 img" src="assets/z.png" alt="logo" />
+    <h1 class="h3 mb-3 font-weight-normal text-light">Sign up</h1>
+    <label class="sr-only text-light" for="inputEmail">Email Address</label>
+    <input
+      type="email"
+      class="form-control mb-2"
+      id="inputEmail"
+      placeholder="Email Address"
+      formControlName="email"
+      [class.is-invalid]="emailValidate"
+    />
+    <label class="sr-only text-light" for="inputPassword">Password</label>
+    <input
+      type="password"
+      class="form-control mb-3"
+      id="inputPassword"
+      placeholder="Password"
+      formControlName="password"
+      [class.is-invalid]="passwordValidate"
+    />
+    <label class="sr-only text-light" for="inputPassword2">Confirm Password</label>
+    <input
+      type="password"
+      class="form-control mb-3"
+      id="inputPassword2"
+      placeholder="Confirm Password"
+      formControlName="password2"
+      [class.is-invalid]="password2Validate"
+    />
+    <button type="submit" class="btn btn-lg btn-success btn-block mb-2" [disabled]="password2Validate">
+      Sign up
+    </button>
+    <p></p>
+    <a [routerLink]="['/login']">Do you have an account?</a>
+    <div [routerLink]="['/redes']"><p class="mt-4 mb-3 text-muted">© Escuadron Z - 2021</p></div>
+  </form>
+</div>
+</div>

@@ -1,0 +1,17 @@
+<div style="margin-top: 10px ;border-radius: 30px;background-color: rgba(0, 139, 139, 0.384); padding:25px;width:600px;" class="container">
+  
+    <form [formGroup]="productoForm" (ngSubmit)="postForm(productoForm.value)">
+      <h1 class="h3 mb-3 font-weight-normal text-dark">Producto</h1>
+      <div>
+        <label class="text-muted" for="inputProducto">Nombre</label>
+        <input type="text" class="form-control" id="inputProducto" placeholder="Ingresa el producto..." formControlName="Producto" />  
+      </div>
+      <div>
+        <label class="text-muted" for="inputDescripcion">Descripción</label>
+        <input type="text" class="form-control" id="inputDescripcion" placeholder="Ingresa el usuario..." formControlName="Descripcion" />
+      </div>
+      <button  style="margin:10px;" type="submit" class="btn btn-lg btn-warning btn-block mb-2"> Guardar </button>
+    </form>
+  </div>
+  <!-- The routed views render in the <router-outlet>-->
+  <router-outlet></router-outlet>

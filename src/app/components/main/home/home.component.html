@@ -1,0 +1,16 @@
+
+<div style="background-color: rgba(56, 94, 175, 0.37);width: 1000px;height:100%; border-radius:10px;margin-top:40px; margin-left:200px; margin-right:400px;"class="text-center">
+<h1 class="text-dark">Productos</h1>
+<div *ngFor="let producto of productos"
+      [class.selected]="producto.id === selectedId"
+      [routerLink]="['/producto', producto.id]">
+ <div class="container row col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+  <div class="card h-150 col-xs-3 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-light" style=" max-width:319px;margin-left:70px;margin-bottom:30px;background-color:rgb(105,105,105);">
+    <div class="card-body">
+      <h3 class="card-title">{{producto.Producto}}</h3>
+    </div>
+  </div>
+</div>
+</div>
+<!-- The routed views render in the <router-outlet>-->
+  <router-outlet></router-outlet>
